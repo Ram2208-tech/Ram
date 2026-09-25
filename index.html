@@ -1,0 +1,82 @@
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oriole Chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Chat history">
+      <div class="brand-row">
+        <div class="brand-mark">O</div>
+        <span class="brand-name">oriole</span>
+        <button class="icon-button sidebar-close" aria-label="Close sidebar">×</button>
+      </div>
+
+      <button class="new-chat" id="newChatButton"><span>＋</span> New conversation</button>
+
+      <div class="history-label">Recent</div>
+      <nav class="chat-history">
+        <button class="history-item active"><span class="history-dot"></span><span>Planning a calmer week</span><span class="more">•••</span></button>
+        <button class="history-item"><span class="history-dot"></span><span>Ideas for a dinner party</span></button>
+        <button class="history-item"><span class="history-dot"></span><span>Explain compound interest</span></button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="profile"><div class="avatar small">JD</div><div><strong>Jamie Davis</strong><span>Personal workspace</span></div><span class="more">•••</span></div>
+        <div class="sidebar-meta"><span class="status-dot"></span> Oriole is online <span>⌘ K</span></div>
+      </div>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="topbar">
+        <button class="icon-button menu-button" aria-label="Open sidebar">☰</button>
+        <div class="thread-heading"><span class="online-pip"></span><div><strong>Oriole</strong><span>Thoughtful assistant</span></div></div>
+        <div class="top-actions"><button class="icon-button" aria-label="Search conversations">⌕</button><button class="icon-button" aria-label="More options">•••</button></div>
+      </header>
+
+      <section class="conversation" id="conversation" aria-live="polite">
+        <div class="date-stamp">TODAY · 9:41 AM</div>
+        <div class="message-row user-row">
+          <div class="message user-message">I feel like my week is running me instead of the other way around. Can you help me make a calmer plan?</div>
+          <div class="avatar">JD</div>
+        </div>
+        <div class="message-row assistant-row">
+          <div class="assistant-avatar">O</div>
+          <div class="message assistant-message"><p>Absolutely. Let’s make space for the things that matter without packing every minute.</p><p>What are the <em>three things</em> you’d most like to feel by the end of this week?</p><span class="message-time">9:42 AM</span></div>
+        </div>
+        <div class="quick-prompts">
+          <span>Try asking</span>
+          <button class="prompt">Help me prioritize</button>
+          <button class="prompt">Build a simple routine</button>
+          <button class="prompt">I need a reset</button>
+        </div>
+      </section>
+
+      <footer class="composer-wrap">
+        <div class="composer" id="composer">
+          <textarea id="messageInput" rows="1" placeholder="Message Oriole..." aria-label="Message Oriole"></textarea>
+          <div class="composer-actions"><button class="tool-button" aria-label="Attach a file">⌕</button><button class="send-button" id="sendButton" aria-label="Send message">↑</button></div>
+        </div>
+        <div class="composer-note"><span>Oriole can make mistakes. Check important info.</span><span><kbd>Enter</kbd> to send</span></div>
+      </footer>
+    </main>
+
+    <aside class="context-panel" aria-label="Conversation details">
+      <div class="context-kicker">IN THIS CHAT</div>
+      <div class="context-title"><span class="spark">✦</span><h2>Weekly reset</h2><button class="icon-button">•••</button></div>
+      <p class="context-copy">A gentle plan for getting your time and attention back.</p>
+      <div class="rule"></div>
+      <div class="context-section"><div class="section-title">Conversation notes <button class="plus">＋</button></div><div class="note"><span class="note-icon">✎</span><span>Focus on fewer, more meaningful commitments.</span></div><div class="note"><span class="note-icon">✎</span><span>Leave breathing room between plans.</span></div></div>
+      <div class="context-section"><div class="section-title">Suggested rhythm</div><div class="rhythm"><div><span>Morning</span><strong>Choose one priority</strong></div><span class="rhythm-line"></span><div><span>Afternoon</span><strong>Protect a quiet hour</strong></div><span class="rhythm-line"></span><div><span>Evening</span><strong>Close the loop</strong></div></div></div>
+      <div class="context-bottom"><span class="status-dot"></span><span>Private conversation</span><button class="icon-button">ⓘ</button></div>
+    </aside>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
